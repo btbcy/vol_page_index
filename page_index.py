@@ -19,7 +19,7 @@ html_list = [fn for fn in os.listdir(path_html) if re.match(r'\d+\.html', fn)]
 for fh in html_list:
     with open(os.path.join(path_html, fh), encoding='UTF-8') as f_html:
         string_html = ''.join(f_html.readlines())
-        image_fn = re.search(r'\.\./image/vol\.moe-\d+\.jpg', string_html).group()
+        image_fn = re.search(r'\.\./image/(vol(\.moe)?)-\d+\.jpg', string_html).group()
         image_order = 'cq_' + fh.split('.')[0] + '.jpg'
         shutil.move(os.path.join(path_image, image_fn), os.path.join(path_image, image_order)) 
 
