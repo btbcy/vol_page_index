@@ -1,9 +1,18 @@
-1. python page_index.py
+# install kcc
+  - ```pip install --user KindleComicConverter```
+
+# USAGE
+1. input
    - path
-   - name with out .epub
+   - name without .epub
+   - remove [epub] ...
    - rename image inorder (from html)
+   
 2. kindle comic converter
    - Stretch/Upscale
-   - add dictionary
-3. rename .cbz file and copy to your reader
+   - change device profile if you need   
+   - generate .cbz file and delete temp folder
+   
+3. copy .cbz file to your device
+   
 
