@@ -8,7 +8,7 @@ from config import Config
 
 
 def unzip_from_epub(path, origin_filename):
-    short_filename = re.search(r'\[(\w+)]Vol_.*', origin_filename).group()
+    short_filename = re.search(r'\[([\w\!]+)](?:Vol|Chapter)_.*', origin_filename).group()
 
     origin_path_file = os.path.join(path, origin_filename)
     path_filename = os.path.join(path, short_filename)
@@ -63,4 +63,4 @@ if __name__ == '__main__':
     for file in file_list:
         rename_image_name_inorder(file)
         kindle_comic_converter(file)
-        shutil.rmtree(absolute_filename)
+        shutil.rmtree(file)
